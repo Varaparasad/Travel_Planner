@@ -38,67 +38,74 @@ It features **JWT authentication**, **MongoDB caching**, and a sleek **React fro
 
 ---
 
-## 📁 Project Structure
-
-/ai-travel-planner
-├── /backend
-│ ├── .env # --- Stores all API keys and secrets ---
-│ ├── requirements.txt # Backend Python dependencies
-│ ├── db.py # MongoDB connection setup
-│ ├── auth.py # Handles user registration & login logic
-│ ├── plan_cache.py # Handles MongoDB plan caching & similarity search
-│ └── main.py # Main FastAPI app: routes, LangGraph agent
-│
-└── /frontend
-├── package.json # Frontend Node.js dependencies
-├── /src
-│ ├── /components # Reusable React components (Header, Routes)
-│ ├── /context # AppContext.jsx (Global state for auth & plans)
-│ ├── /pages # Main pages (HomePage, PlanPage, LoginPage)
-│ ├── App.jsx # Main router setup
-│ ├── main.jsx # React entry point
-│ └── App.css # Global styles
-└── README.md # This file
-
-
 ---
 
-## 🛠️ Setup and Installation
+## Getting Started
+
+To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
-- 🐍 **Python 3.10+**
-- 🟢 **Node.js 18+**
-- 🍃 **MongoDB** (Local or Atlas instance)
 
----
+Make sure you have the following installed on your system:
 
-### 1️⃣ Backend Setup
+* Node.js (LTS version recommended)
+* npm (comes with Node.js) or Yarn
+* MongoDB (local instance or a cloud-hosted service like MongoDB Atlas)
 
-```bash
-cd backend
+### Installation
 
+1.  **Clone the repository:**
 
-GROQ_API_KEY="your-groq-api-key-here"
-AVIATION_STACK_API_KEY='your-aviation-api-key'
-SECRET_KEY="your-strong-random-jwt-secret-key"
+    ```bash
+    git clone https://github.com/Varaparasad/Travel_Planner.git
+    ```
+2.  **Install Python Dependencies:**
 
-MONGO_DETAILS="mongodb://localhost:27017"
+    ```bash
+    pip install -r requirements.txt
+    ```
 
+3.  **Install Frontend Dependencies:**
 
-pip install -r requirements.txt
+    ```bash
+    cd Frontend
+    npm install
+    # or yarn install
+    ```
 
-## Running the Application
+4.  **Install Backend Dependencies:**
 
-You must have three services running simultaneously:
+    ```bash
+    cd Backend
+    npm install
+    # or yarn install
+    ```
+    Create a .env file with:
+    ```bash
+    GROQ_API_KEY="your-groq-api-key-here"
+    AVIATION_STACK_API_KEY='your-aviation-api-key'
+    SECRET_KEY="your-strong-random-jwt-secret-key"
+    MONGO_DETAILS="mongodb://localhost:27017"
+     ```
 
-MongoDB database
-FastAPI backend
-React frontend
+### Running the Application
 
-Ensure your MongoDB server is running locally or remotely (e.g., via Docker or MongoDB Atlas).
-Run the Backend (Terminal 1)
-cd backend
-uvicorn main:app --host 127.0.0.1 --port 5000 --reload
-Run the Frontend (Terminal 2)
-cd frontend
-npm run dev
+1.  **Start the Backend Server:**
+
+    From the `backend` directory:
+
+    ```bash
+    uvicorn main:app --host 127.0.0.1 --port 5000 --reload
+    ```
+
+    The backend server will typically run on `http://127.0.0.1:5000`.
+
+2.  **Start the Frontend Development Server:**
+
+    From the `frontend` directory:
+
+    ```bash
+    npm run dev
+    ```
+
+    The frontend application will typically open in your browser at `http://localhost:5173`.
