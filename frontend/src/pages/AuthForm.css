@@ -1,0 +1,122 @@
+.auth-card {
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.auth-title {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.auth-switch {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 1rem;
+}
+
+.auth-switch a {
+  color: #00b066;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+.success-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #86efac;
+  border-radius: 0.5rem;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Re-using styles from HomePage.css */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.input-style {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.15s ease-in-out;
+  box-sizing: border-box;
+}
+
+.input-style:focus {
+  outline: none;
+  border-color: #00b066;
+  box-shadow: 0 0 0 3px rgba(0, 176, 102, 0.3);
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.submit-button {
+  background-color: #00b066;
+  color: white;
+  font-weight: 800;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 9999px;
+  box-shadow: 0 10px 15px -3px rgba(0, 176, 102, 0.4);
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #008a50;
+  transform: scale(1.02);
+}
+
+.submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+  border-radius: 0.5rem;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}

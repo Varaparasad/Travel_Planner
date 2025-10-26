@@ -1,0 +1,53 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+.animation-wrapper {
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem; /* Icon size */
+}
+
+.icon {
+  position: absolute;
+  opacity: 0.3;
+}
+
+.plane { font-size: 4rem; }
+.map   { top: 0; left: 0; }
+.hotel { bottom: 0; left: 0; }
+.sun   { top: 0; right: 0; }
+
+.loading-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-top: 2rem;
+}
+
+.loading-subtitle {
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+/* Re-using the animation from before */
+.animate-pulse-fade {
+  animation: pulse-fade 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-fade {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
